@@ -298,10 +298,10 @@ if st.button("Predict Attrition"):
     # RISK LEVEL
     # =====================================
 
-    if attrition_prob > 70:
+    if attrition_prob >= 50:
         risk_level = "HIGH RISK"
 
-    elif attrition_prob > 40:
+    elif attrition_prob >= 25:
         risk_level = "MEDIUM RISK"
 
     else:
@@ -328,6 +328,9 @@ if st.button("Predict Attrition"):
         "Risk Level",
         risk_level
     )
+    st.write(
+    f"Attrition Probability: {attrition_prob:.2f}%"
+)
 
 # =========================================
 # FOOTER
